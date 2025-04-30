@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Learning Hub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      position: relative;
+      background: url('https://images.unsplash.com/photo-1587613755371-1b9c5c9d5407?fit=crop&w=1920&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      min-height: 100vh;
+      z-index: 0;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 50, 50, 0.6));
+      z-index: -1;
+    }
+
+    .navbar {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 15px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 999;
+    }
+
+    .navbar li {
+      margin: 0 15px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: color 0.3s;
+    }
+
+    .navbar a i {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .navbar a:hover {
+      color: #4CAF50;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      animation: slideIn 1.5s ease-out;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      margin: 20px 0;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .btn {
+      background: #4CAF50;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #45a049;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 60px 20px;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+
+    .feature-card {
+      background: #fff;
+      color: #333;
+      border-radius: 15px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .feature-card i {
+      font-size: 2.5rem;
+      color: #4CAF50;
+      margin-bottom: 15px;
+    }
+
+    .feature-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-100px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <ul class="navbar">
+    <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+    <li><a href="quiz.html"><i class="fas fa-question"></i>Quiz</a></li>
+    <li><a href="notes.html"><i class="fas fa-book"></i>Notes</a></li>
+    <li><a href="videos.html"><i class="fas fa-video"></i>Videos</a></li>
+    <li><a href="contact.html"><i class="fas fa-address-book"></i>Contact</a></li>
+    <li><a href="feedback.html"><i class="fas fa-comment"></i>Feedback</a></li>
+  </ul>
+
+  <header>
+    <h1>Welcome to Interactive Learning</h1>
+    <p>Your personalized education companion</p>
+    <button class="btn">Start Learning</button>
+  </header>
+
+  <section class="features">
+    <div class="feature-card">
+      <i class="fas fa-question-circle"></i>
+      <h3>Interactive Quizzes</h3>
+      <p>Test your knowledge and track your progress.</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-book"></i>
+      <h3>Study Notes</h3>
+      <p>Access concise and effective notes anytime.</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-video"></i>
+      <h3>Video Lectures</h3>
+      <p>Learn through engaging video lessons.</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-envelope"></i>
+      <h3>Get in Touch</h3>
+      <p>Reach out to us for help and feedback.</p>
+    </div>
+  </section>
+</body>
+</html>

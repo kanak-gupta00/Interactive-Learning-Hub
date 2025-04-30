@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notes - Interactive Learning Hub</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 100%;
+      width: 100%;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-sizing: border-box;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+    .subject-box {
+      background-color: #f0f8ff;
+      border-left: 6px solid #007bff;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+    }
+    .subject-box h3 {
+      margin: 0 0 8px;
+      color: #007bff;
+    }
+    .subject-box p {
+      color: #333;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .search-section {
+      margin-top: 30px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Interactive Learning Hub - Notes Section</h1>
+
+    <!-- Compiler Design Section -->
+    <div class="subject-box">
+      <h3>1. Compiler Design</h3>
+      <p>In Compiler Design, we learn how to convert high-level programming languages (like Java or C++) into machine-readable code. The process is broken down into stages:</p>
+      <ul>
+        <li><strong>Lexical Analysis:</strong> Breaking the code into tokens (words and symbols).</li>
+        <li><strong>Syntax Analysis:</strong> Making sure the tokens follow the language's grammar rules (like sentence structure in English).</li>
+        <li><strong>Semantic Analysis:</strong> Checking if the code makes logical sense (like ensuring a math equation is valid).</li>
+        <li><strong>Code Generation:</strong> Finally, converting everything into machine code that the computer can understand.</li>
+      </ul>
+      <p>Understanding how a compiler works is key for building efficient software and debugging code.</p>
+    </div>
+
+    <!-- Software Testing Section -->
+    <div class="subject-box">
+      <h3>2. Software Testing</h3>
+      <p>Software Testing is the process of finding errors in a program and making sure it works as expected. There are different types of testing:</p>
+      <ul>
+        <li><strong>Unit Testing:</strong> Testing individual parts of the program (like testing a single function).</li>
+        <li><strong>Integration Testing:</strong> Testing if different parts of the program work together.</li>
+        <li><strong>System Testing:</strong> Testing the whole system to make sure everything is working as planned.</li>
+      </ul>
+      <p>Testing is important to prevent bugs and ensure the software is reliable for users.</p>
+    </div>
+
+    <!-- Mobile Application Development Section -->
+    <div class="subject-box">
+      <h3>3. Mobile Application Development</h3>
+      <p>Mobile Application Development is the process of creating apps for smartphones and tablets. There are a few main steps:</p>
+      <ul>
+        <li><strong>Planning:</strong> Deciding what the app will do and how it will look.</li>
+        <li><strong>Design:</strong> Creating user-friendly interfaces that are easy to use on small screens.</li>
+        <li><strong>Development:</strong> Writing the code to make the app function properly.</li>
+        <li><strong>Testing:</strong> Ensuring the app works well on different devices and operating systems (like Android or iOS).</li>
+      </ul>
+      <p>With tools like Android Studio and Xcode, developers can create apps that users will love and find useful.</p>
+    </div>
+
+    <!-- Software & Project Management Section -->
+    <div class="subject-box">
+      <h3>4. Software & Project Management</h3>
+      <p>Software & Project Management is about organizing and overseeing a software development project from start to finish. Key concepts include:</p>
+      <ul>
+        <li><strong>Agile Methodology:</strong> A flexible approach where developers work in short cycles, getting feedback from users quickly and adapting to changes.</li>
+        <li><strong>Scrum:</strong> A specific Agile framework where teams work in "sprints" to complete a small piece of the project in a short time.</li>
+        <li><strong>Documentation:</strong> Keeping track of requirements, designs, and decisions to make sure the project stays on course.</li>
+      </ul>
+      <p>Good management ensures the project is delivered on time, within budget, and meets the quality standards.</p>
+    </div>
+
+    <!-- Search Section -->
+    <div class="search-section">
+      <h2>Search for Anything</h2>
+      <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="Type your topic here..." />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("searchForm").addEventListener("submit", function(e) {
+      e.preventDefault(); // Page reload se bachaaye
+      const query = document.getElementById("searchInput").value.trim();
+      if (query !== "") {
+        const googleSearchURL = "https://www.google.com/search?q=" + encodeURIComponent(query);
+        window.open(googleSearchURL, "_blank");
+      }
+    });
+
+  </script>
+</body>
+</html>
