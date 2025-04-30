@@ -1,3 +1,4 @@
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -99,16 +100,40 @@ form input, form textarea, form button {
   width: 100%;
   margin-bottom: 10px;
 }
-@media screen and (max-width:600px) {
+
+/* Mobile Specific Adjustments */
+@media screen and (max-width: 600px) {
+  /* Navbar on mobile */
   .navbar {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    flex-direction: row;            /* Keep navbar horizontal on mobile */
+    justify-content: space-around;   /* Spread out navbar items */
+    gap: 20px;                       /* Adjust gap between navbar items */
   }
 
+  .navbar li {
+    display: inline-block;           /* Make navbar items inline-block */
+  }
+
+  /* Adjust contact form for mobile */
   #contact-form {
-    padding: 50px;
+    padding: 20px;                  /* Adjust padding for mobile */
     margin: 10px;
   }
-  
+
+  /* Adjust Hero Section for mobile */
+  .hero h1 {
+    font-size: 28px;                /* Reduce font size on mobile */
+    text-align: center;             /* Center align the text */
+  }
+
+  .hero p {
+    font-size: 16px;                /* Reduce font size on mobile */
+    text-align: center;             /* Center align the text */
+  }
+
+  /* General layout adjustment for mobile */
+  .note-subject, #quiz-container, #contact-form, #video-list {
+    padding: 20px;                  /* Reduce padding for mobile */
+    margin: 10px;                   /* Reduce margin for mobile */
+  }
 }
